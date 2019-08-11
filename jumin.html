@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>ÁÖ¹Î¹øÈ£ Ã¼Å©</title>
+<meta charset="UTF-8">
+<title>ì£¼ë¯¼ë²ˆí˜¸ ì²´í¬</title>
 <script>
 	function returnMain() {
 		window.location.href = 'index.html'
@@ -10,10 +10,10 @@
 	function juminCheck(jumin1, jumin2) {
 		var juminNum = jumin1 + jumin2;
 
-		//ÁÖ¹Î¹øÈ£ Á¤±ÔÇ¥Çö½Ä Àû¿ë
+		//ì£¼ë¯¼ë²ˆí˜¸ ì •ê·œí‘œí˜„ì‹ ì ìš©
 		var regex = /[0-9]{13}/;
 		if (!regex.test(juminNum)) {
-			alert("Á¤±ÔÇ¥Çö½Ä¿¡ ¸ÂÁö¾ÊÀ½!!");
+			alert("ì •ê·œí‘œí˜„ì‹ì— ë§ì§€ì•ŠìŒ!!");
 			return;
 		}
 		var sum = 0;
@@ -27,9 +27,9 @@
 		temp = 11 - (sum % 11);
 		result = temp % 10;
 		if (result != juminNum.charAt(12)) {
-			alert("Æ²¸° ÁÖ¹Î¹øÈ£ÀÔ´Ï´Ù!");
+			alert("í‹€ë¦° ì£¼ë¯¼ë²ˆí˜¸ì…ë‹ˆë‹¤!");
 		} else {
-			alert("Á¤»ó Áß¹Î¹øÈ£ÀÔ´Ï´Ù!");
+			alert("ì •ìƒ ì¤‘ë¯¼ë²ˆí˜¸ì…ë‹ˆë‹¤!");
 		}
 	}
 </script>
@@ -37,27 +37,27 @@
 <body align="center">
 	<form name="regForm">
 		<div>
-			ÁÖ¹Îµî·Ï ¹øÈ£ ÀÔ·Â <input type="text" name="num1" size=6
+			ì£¼ë¯¼ë“±ë¡ ë²ˆí˜¸ ì…ë ¥ <input type="text" name="num1" size=6
 				onKeyUp="if(this.value.length==6)regForm.num2.focus();">- <input
 				type="text" name="num2" size=7> <input type="button"
-				value="ÁÖ¹Î¹øÈ£ Ã¼Å©" onClick="juminCheck(num1.value,num2.value)">
+				value="ì£¼ë¯¼ë²ˆí˜¸ ì²´í¬" onClick="juminCheck(num1.value,num2.value)">
 		</div>
 		<div>
 			<br> <br> <br>
-			<h3>HTML ¼Ò½º</h3>
+			<h3>HTML ì†ŒìŠ¤</h3>
 			<textarea rows="40" cols="80"><!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>ÁÖ¹Î¹øÈ£ Ã¼Å©</title>
+<title>ì£¼ë¯¼ë²ˆí˜¸ ì²´í¬</title>
 <script>
 	function juminCheck(jumin1, jumin2) {
 		var juminNum = jumin1 + jumin2;
 
-		//ÁÖ¹Î¹øÈ£ Á¤±ÔÇ¥Çö½Ä Àû¿ë
+		//ì£¼ë¯¼ë²ˆí˜¸ ì •ê·œí‘œí˜„ì‹ ì ìš©
 		var regex = /[0-9]{13}/;
 		if (!regex.test(juminNum)) {
-			alert("Á¤±ÔÇ¥Çö½Ä¿¡ ¸ÂÁö¾ÊÀ½!!");
+			alert("ì •ê·œí‘œí˜„ì‹ì— ë§ì§€ì•ŠìŒ!!");
 			return;
 		}
 		var sum = 0;
@@ -71,9 +71,9 @@
 		temp = 11 - (sum % 11);
 		result = temp % 10;
 		if (result != juminNum.charAt(12)) {
-			alert("Æ²¸° ÁÖ¹Î¹øÈ£ÀÔ´Ï´Ù!");
+			alert("í‹€ë¦° ì£¼ë¯¼ë²ˆí˜¸ì…ë‹ˆë‹¤!");
 		} else {
-			alert("Á¤»ó Áß¹Î¹øÈ£ÀÔ´Ï´Ù!");
+			alert("ì •ìƒ ì¤‘ë¯¼ë²ˆí˜¸ì…ë‹ˆë‹¤!");
 		}
 	}
 </script>
@@ -81,14 +81,14 @@
 <body align="center">
 	<form name="regForm">
 		<div>
-			ÁÖ¹Îµî·Ï ¹øÈ£ ÀÔ·Â <input type="text" name="num1" size=6
+			ì£¼ë¯¼ë“±ë¡ ë²ˆí˜¸ ì…ë ¥ <input type="text" name="num1" size=6
 				onKeyUp="if(this.value.length==6)regForm.num2.focus();">- <input
 				type="text" name="num2" size=7> <input type="button"
-				value="ÁÖ¹Î¹øÈ£ Ã¼Å©" onClick="juminCheck(num1.value,num2.value)">
+				value="ì£¼ë¯¼ë²ˆí˜¸ ì²´í¬" onClick="juminCheck(num1.value,num2.value)">
 		</div>
 		<div>
 			<br> <br> <br>
-			<h3>HTML ¼Ò½º</h3>
+			<h3>HTML ì†ŒìŠ¤</h3>
 			<textarea rows="40" cols="80"></textarea>
 			
 		</div>
@@ -98,7 +98,7 @@
 
 </body>
 </html></textarea>
-			<br> <br> <input type="button" value="µÇµ¹¾Æ°¡±â"
+			<br> <br> <input type="button" value="ë˜ëŒì•„ê°€ê¸°"
 				onClick="returnMain()">
 		</div>
 	</form>
