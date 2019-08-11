@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>주민번호 체크</title>
+<script>
+	function returnMain() {
+		window.location.href = 'index.html'
+	}
+	function juminCheck(jumin1, jumin2) {
+		var juminNum = jumin1 + jumin2;
+
+		//주민번호 정규표현식 적용
+		var regex = /[0-9]{13}/;
+		if (!regex.test(juminNum)) {
+			alert("정규표현식에 맞지않음!!");
+			return;
+		}
+		var sum = 0;
+		var temp = 0;
+		var result = 0;
+		var weight = new Array(2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5);
+
+		for (i = 0; i < 12; i++) {
+			sum = sum + (juminNum.charAt(i)) * weight[i];
+		}
+		temp = 11 - (sum % 11);
+		result = temp % 10;
+		if (result != juminNum.charAt(12)) {
+			alert("틀린 주민번호입니다!");
+		} else {
+			alert("정상 중민번호입니다!");
+		}
+	}
+</script>
+</head>
+<body align="center">
+	<form name="regForm">
+		<div>
+			주민등록 번호 입력 <input type="text" name="num1" size=6
+				onKeyUp="if(this.value.length==6)regForm.num2.focus();">- <input
+				type="text" name="num2" size=7> <input type="button"
+				value="주민번호 체크" onClick="juminCheck(num1.value,num2.value)">
+		</div>
+		<div>
+			<br> <br> <br>
+			<h3>HTML 소스</h3>
+			<textarea rows="40" cols="80"><!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>주민번호 체크</title>
+<script>
+	function juminCheck(jumin1, jumin2) {
+		var juminNum = jumin1 + jumin2;
+
+		//주민번호 정규표현식 적용
+		var regex = /[0-9]{13}/;
+		if (!regex.test(juminNum)) {
+			alert("정규표현식에 맞지않음!!");
+			return;
+		}
+		var sum = 0;
+		var temp = 0;
+		var result = 0;
+		var weight = new Array(2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 5);
+
+		for (i = 0; i < 12; i++) {
+			sum = sum + (juminNum.charAt(i)) * weight[i];
+		}
+		temp = 11 - (sum % 11);
+		result = temp % 10;
+		if (result != juminNum.charAt(12)) {
+			alert("틀린 주민번호입니다!");
+		} else {
+			alert("정상 중민번호입니다!");
+		}
+	}
+</script>
+</head>
+<body align="center">
+	<form name="regForm">
+		<div>
+			주민등록 번호 입력 <input type="text" name="num1" size=6
+				onKeyUp="if(this.value.length==6)regForm.num2.focus();">- <input
+				type="text" name="num2" size=7> <input type="button"
+				value="주민번호 체크" onClick="juminCheck(num1.value,num2.value)">
+		</div>
+		<div>
+			<br> <br> <br>
+			<h3>HTML 소스</h3>
+			<textarea rows="40" cols="80"></textarea>
+			
+		</div>
+	</form>
+
+
+
+</body>
+</html></textarea>
+			<br> <br> <input type="button" value="되돌아가기"
+				onClick="returnMain()">
+		</div>
+	</form>
+
+
+
+</body>
+</html>

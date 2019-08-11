@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>IT 이슈</title>
+<script>
+	var msg = "-4차 산업혁명 '태풍'이 몰려온다. 인공지능,빅데이터,IoT,로봇공학,나노기술 등...-";
+	var time = 0;
+	for (i = 0; i < 200; i++) {
+		msg = " " + msg;
+
+	}
+
+	//재귀함수를 사용해서 텍스트를 흐르게 함
+	function scrollIssue() {
+		document.myForm.issue.value = msg.substring(0, 199);
+		msg = msg.substring(1, msg.length) + msg.substring(0, 1);
+		time = setTimeout("scrollIssue()", 50);
+	}
+	function stopIssue() {
+		clearTimeout(time);
+	}
+	function returnMain() {
+		window.location.href = 'index.html'
+	}
+</script>
+</head>
+<body onLoad="scrollIssue()">
+	<form name="myForm">
+		<table align="center">
+			<tr>
+				<td><h3>IT 이슈</h3></td>
+				<td><input type="text" name="issue" size="100"
+					style="background-color: yellow" onMouseOver="stopIssue()"
+					onMouseOut="scrollIssue()"></td>
+			</tr>
+		</table>
+	</form>
+	<div align="center">
+		<h3>HTML 소스</h3>
+		<textarea rows="40" cols="80"><!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>IT 이슈</title>
+<script>
+	var msg = "-4차 산업혁명 '태풍'이 몰려온다. 인공지능,빅데이터,IoT,로봇공학,나노기술 등...-";
+	var time = 0;
+	for (i = 0; i < 200; i++) {
+		msg = " " + msg;
+
+	}
+
+	//재귀함수를 사용해서 텍스트를 흐르게 함
+	function scrollIssue() {
+		document.myForm.issue.value = msg.substring(0, 199);
+		msg = msg.substring(1, msg.length) + msg.substring(0, 1);
+		time = setTimeout("scrollIssue()", 50);
+	}
+	function stopIssue() {
+		clearTimeout(time);
+	}
+</script>
+</head>
+<body onLoad="scrollIssue()">
+	<form name="myForm">
+		<table align="center">
+			<tr>
+				<td><h3>IT 이슈</h3></td>
+				<td><input type="text" name="issue" size="100"
+					style="background-color: yellow" onMouseOver="stopIssue()"
+					onMouseOut="scrollIssue()"></td>
+			</tr>
+		</table>
+	</form>
+
+
+</body>
+</html></textarea>
+		<br> <br> <input type="button" value="되돌아가기"
+			onClick="returnMain()">
+	</div>
+
+</body>
+</html>
